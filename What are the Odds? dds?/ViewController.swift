@@ -8,10 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var option: Option!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+       
     }
 
 }

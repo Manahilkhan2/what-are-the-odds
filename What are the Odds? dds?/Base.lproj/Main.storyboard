@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1957" y="64"/>
         </scene>
-        <!--Game Table View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="GuX-fj-vXq">
             <objects>
-                <viewController id="RDB-wf-agG" customClass="GameTableViewController" customModule="What_are_the_Odds__dds_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RDB-wf-agG" customClass="GameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbL-qc-MKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +113,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Generate">
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onGenerateButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="YJ9-Pv-aUb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Guess" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-z5-vlV">
                                 <rect key="frame" x="94" y="538" width="227" height="34"/>
@@ -125,6 +128,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="o8B-Wy-BUG"/>
+                    <connections>
+                        <outlet property="generateButton" destination="IZN-qf-qCz" id="Mfp-wO-ggh"/>
+                        <outlet property="generatedResponseLabel" destination="9u2-6G-GzS" id="6pN-xp-uro"/>
+                        <outlet property="guessTextField" destination="bYJ-z5-vlV" id="5rA-OH-2mb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZH-f4-77W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +141,6 @@
         <!--Result Table View Controller-->
         <scene sceneID="qAt-g7-lDq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7I1-Xe-aGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="zKo-G8-1Jz" customClass="ResultTableViewController" customModule="What_are_the_Odds__dds_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eeR-l8-2i2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -142,6 +149,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7I1-Xe-aGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3538" y="64"/>
         </scene>
@@ -165,7 +173,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ytg-Ak-jPm"/>
+        <segue reference="4YE-mB-jR2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="best-odds-in-vegas" width="3544" height="3378"/>

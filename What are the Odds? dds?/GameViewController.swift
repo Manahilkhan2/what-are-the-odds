@@ -79,10 +79,10 @@ class GameViewController: UIViewController {
             else {
                 generatedResponseLabel.text = "Odd"
             }
-        };if else option.name == "OneThroughTen" let {
+        }else if option.name == "OneThroughTen" {
             var result = Int.random(in: 0...10)
-        };else option.name == "AThroughZ" let { [self] in
-            var result = self.self.letters
+        }else if  option.name == "AThroughZ"  {
+            var result = self.letters
         }
         
     }

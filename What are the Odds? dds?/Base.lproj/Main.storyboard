@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,12 +24,6 @@
                                 <rect key="frame" x="44" y="418" width="326" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="What are the" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-12-q38">
-                                <rect key="frame" x="20" y="280" width="374" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="70"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abM-bN-eAD">
                                 <rect key="frame" x="95" y="748" width="208" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,6 +36,13 @@
                                     <segue destination="oag-4v-b2D" kind="show" id="Ytg-Ak-jPm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are the" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jB-RI-Dnb">
+                                <rect key="frame" x="20" y="271" width="374" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,7 +91,7 @@
         <!--Game View Controller-->
         <scene sceneID="GuX-fj-vXq">
             <objects>
-                <viewController id="RDB-wf-agG" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController id="RDB-wf-agG" customClass="GameViewController" customModule="What_are_the_Odds__dds_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbL-qc-MKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,12 +118,23 @@
                                     <action selector="onGenerateButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="YJ9-Pv-aUb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Guess" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-z5-vlV">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-z5-vlV">
                                 <rect key="frame" x="94" y="538" width="227" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjj-U6-H9B">
+                                <rect key="frame" x="147" y="694" width="108" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Result">
+                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onResultButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="lQ0-jY-Ogf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LUN-Yl-Ye9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,26 +144,43 @@
                         <outlet property="generateButton" destination="IZN-qf-qCz" id="Mfp-wO-ggh"/>
                         <outlet property="generatedResponseLabel" destination="9u2-6G-GzS" id="6pN-xp-uro"/>
                         <outlet property="guessTextField" destination="bYJ-z5-vlV" id="5rA-OH-2mb"/>
+                        <outlet property="resultButton" destination="vjj-U6-H9B" id="ENF-UL-OaG"/>
+                        <segue destination="zKo-G8-1Jz" kind="show" identifier="resultSegue" id="FY8-2b-7xv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZH-f4-77W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2768" y="64"/>
         </scene>
-        <!--Result Table View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="qAt-g7-lDq">
             <objects>
-                <viewController id="zKo-G8-1Jz" customClass="ResultTableViewController" customModule="What_are_the_Odds__dds_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zKo-G8-1Jz" customClass="ResultViewController" customModule="What_are_the_Odds__dds_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eeR-l8-2i2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-WU-mUp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2e2-3V-dPX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2e2-3V-dPX" firstAttribute="bottom" secondItem="PGf-WU-mUp" secondAttribute="bottom" id="1Rh-PT-hAR"/>
+                            <constraint firstItem="PGf-WU-mUp" firstAttribute="top" secondItem="2e2-3V-dPX" secondAttribute="top" id="JOY-Fm-GBQ"/>
+                            <constraint firstItem="PGf-WU-mUp" firstAttribute="leading" secondItem="2e2-3V-dPX" secondAttribute="leading" id="MNN-Fl-R99"/>
+                            <constraint firstItem="2e2-3V-dPX" firstAttribute="trailing" secondItem="PGf-WU-mUp" secondAttribute="trailing" id="c3O-KW-BGc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WXV-ZV-2bc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I1-Xe-aGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="64"/>
+            <point key="canvasLocation" x="3537.68115942029" y="63.616071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="apf-nh-KzK">

@@ -12,3 +12,30 @@ struct Option {
     
     
 }
+
+private enum Test_Option {
+    case oddsOrEvens
+    case oneToTen
+    case aThroughZ
+}
+
+private func foo() {
+    let option = Test_Option.oneToTen
+    
+    if option == .oddsOrEvens {
+        
+    } else if option == .oneToTen {
+        
+    } else if option == .aThroughZ {
+        
+    }
+    
+    switch option {
+    case .oddsOrEvens:
+        print("odds or evens")
+    case .oneToTen:
+        print("one to ten")
+    case .aThroughZ:
+        print("a through z")
+    }
+}

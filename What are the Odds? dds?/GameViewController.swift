@@ -10,16 +10,20 @@ import UIKit
 class GameViewController: UIViewController {
     // var option: Option!
     var option: Option!
+    var success = false
     
+    @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var generatedResponseLabel: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
     
     var letters = [Letter]()
-    
+    var result: Int?
+    var boolResult: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // generatedResponseLabel.text = ""
         let letter1 = Letter(name: "A")
         let letter2 = Letter(name: "B")
         let letter3 = Letter(name: "C")
@@ -58,34 +62,79 @@ class GameViewController: UIViewController {
     
     // MARK: - Table view data source
     
-   /* override func numberOfSections(in View: UIView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    */
+    /* override func numberOfSections(in View: UIView) -> Int {
+     // #warning Incomplete implementation, return the number of sections
+     return 0
+     }
+     
+     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     // #warning Incomplete implementation, return the number of rows
+     return 0
+     }
+     */
     
     @IBAction func onGenerateButtonPressed() {
         
         if option.name == "OddsOrEvens" {
-            let result = Bool.random()
-            if result == true {
-                generatedResponseLabel.text = "Even"
-                }
-            else {
-                generatedResponseLabel.text = "Odd"
+            boolResult = Bool.random()
+            if boolResult == true {
+                generatedResponseLabel.text = "Evens"
             }
-        }else if option.name == "OneThroughTen" {
-            var result = Int.random(in: 0...10)
+            else {
+                generatedResponseLabel.text = "Odds"
+            }
+        }else if option.name == "OneToTen" {
+            result = Int.random(in: 0...10)
+            if let result = result {
+                generatedResponseLabel.text = result.description
+            }
+            //Figure out how to display Int
+            print("number")
         }else if  option.name == "AThroughZ"  {
-            var result = self.letters
+            let result = letters.randomElement()!
+            generatedResponseLabel.text = result.name
+            print("letter.name")
         }
         
     }
+    //Figure out to compare user input to generator
+    
+    
+    @IBAction func onResultButtonPressed() {
+        if option.name == "OddsOrEvens" {
+            if (guessTextField.text?.lowercased() == "odds" && boolResult == false) || (guessTextField.text?.lowercased() == "evens" && boolResult == true) {
+                success = true
+                performSegue(withIdentifier: "resultSegue", sender: self)
+            } else {
+                success = false
+                performSegue(withIdentifier: "resultSegue", sender: self)
+            }
+        }else if option.name == "OneToTen" {
+            if let input = Int(guessTextField.text!) {
+                if result == input {
+                    success = true
+                    performSegue(withIdentifier: "resultSegue", sender: self)
+                } else {
+                    success = false
+                    performSegue(withIdentifier: "resultSegue", sender: self)
+                }
+                
+            }
+            
+        }else if  option.name == "AThroughZ"  {
+            for letter in letters {
+                if guessTextField.text?.lowercased() == letter.name.lowercased() {
+                    success = true
+                    performSegue(withIdentifier: "resultSegue", sender: self)
+                } else {
+                    success = false
+                    performSegue(withIdentifier: "resultSegue", sender: self)
+                }
+            }
+        }
+    }
+    
+    
     
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -132,7 +181,7 @@ class GameViewController: UIViewController {
      }
      */
     
-    /*
+   
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -140,7 +189,7 @@ class GameViewController: UIViewController {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
-     */
+    
     
 }
 

@@ -16,7 +16,7 @@
 		3F853C30287F320A0079778A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F853C2F287F320A0079778A /* GameViewController.swift */; };
 		3F853C32287F346F0079778A /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F853C31287F346F0079778A /* Letter.swift */; };
 		A3111BBE287DD40B00F07013 /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3111BBD287DD40B00F07013 /* OptionTableViewController.swift */; };
-		A32D44DA287DE0D300C318C6 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D44D9287DE0D300C318C6 /* ResultTableViewController.swift */; };
+		A32D44DA287DE0D300C318C6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D44D9287DE0D300C318C6 /* ResultViewController.swift */; };
 		A32D44DC287DE1FE00C318C6 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D44DB287DE1FE00C318C6 /* Option.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		3F853C2F287F320A0079778A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3F853C31287F346F0079778A /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		A3111BBD287DD40B00F07013 /* OptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
-		A32D44D9287DE0D300C318C6 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		A32D44D9287DE0D300C318C6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		A32D44DB287DE1FE00C318C6 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			children = (
 				3F853C1B287C8C290079778A /* AppDelegate.swift */,
 				3F853C1D287C8C290079778A /* SceneDelegate.swift */,
-				A32D44D9287DE0D300C318C6 /* ResultTableViewController.swift */,
+				A32D44D9287DE0D300C318C6 /* ResultViewController.swift */,
 				3F853C2F287F320A0079778A /* GameViewController.swift */,
 				A3111BBD287DD40B00F07013 /* OptionTableViewController.swift */,
 				A32D44DB287DE1FE00C318C6 /* Option.swift */,
@@ -157,7 +157,7 @@
 				3F853C1C287C8C290079778A /* AppDelegate.swift in Sources */,
 				A32D44DC287DE1FE00C318C6 /* Option.swift in Sources */,
 				3F853C30287F320A0079778A /* GameViewController.swift in Sources */,
-				A32D44DA287DE0D300C318C6 /* ResultTableViewController.swift in Sources */,
+				A32D44DA287DE0D300C318C6 /* ResultViewController.swift in Sources */,
 				A3111BBE287DD40B00F07013 /* OptionTableViewController.swift in Sources */,
 				3F853C1E287C8C290079778A /* SceneDelegate.swift in Sources */,
 				3F853C32287F346F0079778A /* Letter.swift in Sources */,

@@ -122,15 +122,15 @@ class GameViewController: UIViewController {
             }
             
         }else if  option.name == "AThroughZ"  {
-            for letter in letters {
-                if guessTextField.text?.lowercased() == letter.name.lowercased() {
-                    success = true
-                    performSegue(withIdentifier: "resultSegue", sender: self)
-                } else {
-                    success = false
-                    performSegue(withIdentifier: "resultSegue", sender: self)
-                }
+            
+            if guessTextField.text?.lowercased() == generatedResponseLabel.text!.lowercased() {
+                success = true
+                performSegue(withIdentifier: "resultSegue", sender: self)
+            } else {
+                success = false
+                performSegue(withIdentifier: "resultSegue", sender: self)
             }
+            
         }
     }
     
@@ -181,14 +181,18 @@ class GameViewController: UIViewController {
      }
      */
     
-   
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller
+        let dvc = segue.destination as! ResultViewController
+        dvc.success = success
+        
+    }
     
     
 }

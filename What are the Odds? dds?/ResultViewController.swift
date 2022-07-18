@@ -8,14 +8,23 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
     var success = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if success  {
-            <#code#>
-        }else {
+        
+        
+        if success == true  {
+            view.backgroundColor = .systemGreen
+            resultLabel.text = "The 😎dds are in Your Favor!"
             
+        }else if success == false {
+            view.backgroundColor = .systemRed
+            resultLabel.text = "The ☹️dds are Against You!"
         }
     }
  

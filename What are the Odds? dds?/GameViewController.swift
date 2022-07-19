@@ -134,7 +134,9 @@ class GameViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func onBackgroundTapped() {
+        guessTextField.resignFirstResponder()
+    }
     
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

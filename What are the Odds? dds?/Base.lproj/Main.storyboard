@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efl-py-zXg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,32 +20,42 @@
                                 <rect key="frame" x="0.0" y="70" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="best-odds-in-vegas" translatesAutoresizingMaskIntoConstraints="NO" id="Owt-zj-LCE">
-                                <rect key="frame" x="44" y="418" width="326" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abM-bN-eAD">
-                                <rect key="frame" x="95" y="748" width="208" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Begin">
-                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="52"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="oag-4v-b2D" kind="show" id="Ytg-Ak-jPm"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are the" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jB-RI-Dnb">
-                                <rect key="frame" x="20" y="271" width="374" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="66"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="JrD-5v-vfT">
+                                <rect key="frame" x="20" y="194" width="369" height="563.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jB-RI-Dnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="102"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="66"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-odds-in-vegas" translatesAutoresizingMaskIntoConstraints="NO" id="Owt-zj-LCE">
+                                        <rect key="frame" x="21.5" y="162" width="326" height="247"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="247" id="6Aw-z7-y8r"/>
+                                            <constraint firstAttribute="width" constant="326" id="wfs-pM-vJM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abM-bN-eAD">
+                                        <rect key="frame" x="106" y="469" width="157" height="94.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Begin">
+                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="52"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="oag-4v-b2D" kind="show" id="Ytg-Ak-jPm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JrD-5v-vfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DOP-9q-FVP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrD-5v-vfT" secondAttribute="trailing" constant="25" id="Zop-qh-TQX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hKc-j0-FKu"/>
                     <connections>
@@ -96,48 +106,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-KP-efp">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-KP-efp">
                                 <rect key="frame" x="0.0" y="78" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u2-6G-GzS">
-                                <rect key="frame" x="83" y="146" width="249" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZN-qf-qCz">
-                                <rect key="frame" x="129" y="399" width="157" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGz-7G-Bbe">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Generate">
-                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="onGenerateButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="YJ9-Pv-aUb"/>
+                                    <action selector="onBackgroundTapped" destination="RDB-wf-agG" eventType="touchUpInside" id="tZD-fJ-Lty"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-z5-vlV">
-                                <rect key="frame" x="94" y="538" width="227" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjj-U6-H9B">
-                                <rect key="frame" x="147" y="694" width="108" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Result">
-                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="onResultButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="lQ0-jY-Ogf"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="IhT-72-T5a">
+                                <rect key="frame" x="20" y="305" width="374" height="287"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n/a" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u2-6G-GzS">
+                                        <rect key="frame" x="20" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZN-qf-qCz">
+                                        <rect key="frame" x="113" y="55.5" width="148.5" height="60.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Generate">
+                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onGenerateButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="YJ9-Pv-aUb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-z5-vlV">
+                                        <rect key="frame" x="145.5" y="151" width="83.5" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjj-U6-H9B">
+                                        <rect key="frame" x="133" y="226.5" width="108" height="60.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Result">
+                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onResultButtonPressed" destination="RDB-wf-agG" eventType="touchUpInside" id="lQ0-jY-Ogf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9u2-6G-GzS" secondAttribute="trailing" constant="20" id="ibW-O1-4sX"/>
+                                    <constraint firstItem="9u2-6G-GzS" firstAttribute="leading" secondItem="IhT-72-T5a" secondAttribute="leading" constant="20" id="tbB-u5-xee"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LUN-Yl-Ye9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LUN-Yl-Ye9" firstAttribute="bottom" secondItem="pGz-7G-Bbe" secondAttribute="bottom" id="4cg-go-cNL"/>
+                            <constraint firstItem="LUN-Yl-Ye9" firstAttribute="trailing" secondItem="IhT-72-T5a" secondAttribute="trailing" constant="20" id="7iT-Nr-3xB"/>
+                            <constraint firstItem="LUN-Yl-Ye9" firstAttribute="bottom" secondItem="IhT-72-T5a" secondAttribute="bottom" constant="100" id="IQh-sD-bkJ"/>
+                            <constraint firstItem="pGz-7G-Bbe" firstAttribute="leading" secondItem="WbL-qc-MKg" secondAttribute="leadingMargin" id="YGl-lg-Kvc"/>
+                            <constraint firstItem="pGz-7G-Bbe" firstAttribute="top" secondItem="WbL-qc-MKg" secondAttribute="topMargin" id="iZN-10-KaV"/>
+                            <constraint firstItem="IhT-72-T5a" firstAttribute="leading" secondItem="LUN-Yl-Ye9" secondAttribute="leading" constant="20" id="ibN-kE-FTn"/>
+                            <constraint firstItem="IhT-72-T5a" firstAttribute="top" secondItem="7Pe-KP-efp" secondAttribute="bottom" constant="40" id="o2J-Ln-Wwj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pGz-7G-Bbe" secondAttribute="trailing" id="rra-2o-3ig"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o8B-Wy-BUG"/>
                     <connections>
@@ -209,6 +241,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="best-odds-in-vegas" width="3544" height="3378"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
